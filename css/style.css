@@ -19,7 +19,7 @@
 }
 
 .menu__btn {
-    display: none;
+  display: none;
 }
 
 .menu__list {
@@ -27,9 +27,19 @@
   gap: 4.05rem;
   font-size: 1.125rem;
 }
+.menu__close {
+  display: none;
+}
+.menu__close-btn {
+  background-color: transparent;
+}
 
 .menu__link {
   color: #151618;
+}
+
+.mobile-nav {
+  display: none;
 }
 
 .user-actions {
@@ -101,7 +111,7 @@
   top: 0;
 }
 
-/* ----------------------------------------------Header_top------------------------------------- */
+/* ---------------------------------------------- ------------------------------------- */
 
 /* ----------------------------------------------Media_queries------------------------------------- */
 @media (max-width: 1001px) {
@@ -126,10 +136,10 @@
   }
 }
 @media (max-width: 769px) {
-    .header__inner {
-        max-width: 640px;
-        margin: 30px auto;
-    }
+  .header__inner {
+    max-width: 640px;
+    margin: 30px auto;
+  }
   .blockquote__text span::after {
     width: 100%;
   }
@@ -141,12 +151,62 @@
     justify-content: space-between;
     background: #ffffff;
   }
-  .menu__btn span{
+  .menu__btn span {
     width: 100%;
     border: 1px solid black;
   }
   .menu {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 180px);
+    width: 360px;
+    background-color: #ffffff;
+  }
+  .menu__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.875rem;
+  }
+  .menu__list .menu__item:nth-child(2) {
+    margin: 60px 0 0;
+  }
+  .menu__link {
+    font-family: 'Cormorant', serif;
+    font-size: 24px;
+  }
+  .menu__close {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    gap: 35px;
+    margin: 30px 0 0;
+    padding: 60px 85px;
+    border-top: 2px solid #f7f2ea;
+  }
+  .mobile-menu__link {
+    color: #151618;
+  }
+  .mobile-actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    padding: 20px 0 18px;
+    background-color: #f7f2ea;
   }
   .logo {
     position: absolute;
