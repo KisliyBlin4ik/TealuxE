@@ -140,6 +140,7 @@ button::-moz-focus-inner {
 
 a,
 a:visited {
+  color: #151618;
   text-decoration: none;
 }
 
